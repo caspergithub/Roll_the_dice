@@ -1,0 +1,156 @@
+body{
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(32, 32, 32);
+}
+.main-container{
+    position: relative;
+    z-index: 100;
+}
+#gameboard {
+    margin: 0 auto;
+    height: 100px;
+    text-align: center;
+    font-size: 65px;
+    background-color: rgba(32, 32, 32, 0);
+}
+#display_result {
+    color: rgb(78, 190, 255);
+    text-shadow: 1px 1px 5px black;
+    margin: 0 auto;
+    height: 70px;
+    font-size: 52px;
+}
+button {
+    color: rgb(78, 190, 255);
+    margin: 8px;
+    padding: 8px;
+    border: 1px solid rgb(78, 190, 255);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    text-shadow: 1px 1px 1px black;
+    background-color: rgb(29, 29, 29);
+    &:hover {
+        background-color: rgb(22, 22, 22);
+
+    }
+    &:focus {
+        outline: none;
+    }
+}
+.higher-btn{
+    &:hover {
+        box-shadow: 0px 1px 5px black;
+    }
+    &:active {
+        box-shadow: inset 0px 1px 5px rgb(100, 100, 100);
+    }
+}
+.lower-btn {
+    &:hover {
+        box-shadow: 0px 1px 5px black;
+    } 
+    &:active {
+        box-shadow: inset 0px 1px 5px rgb(100, 100, 100);
+    }
+}
+.reset-btn{
+    &:hover{
+        box-shadow: 0px 1px 5px black;
+    }
+    &:active{
+        box-shadow: inset 0px 1px 5px rgb(100, 100, 100);
+    }
+}
+i{
+    padding: 10px;
+    text-shadow: 2px 2px 5px black;
+    color: rgb(40, 176, 255);
+}
+p{
+    color: rgb(78, 190, 255);
+    text-shadow: 1px 1px 5px black;
+    font-size: 45px;
+    margin: 5px;
+}
+.besked-div{
+    width: 100%;
+    height: 70px;
+}
+.tries-div{
+    width: 100%;
+    height: 100px;
+}
+.score-div {
+    width: 100%;
+    height: 100px;
+}
+@media only screen and (max-width: 875px) {
+    .besked-div{
+        height: 75px;
+    }
+    .score-div{
+        height: 75px;
+    }
+    .tries-div{
+        height: 75px;
+    }
+    p{
+        font-size: 35px;
+    }
+    button{
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 525px) {
+    .besked-div{
+        height: 50px;
+    }
+    .score-div{
+        height: 50px;
+    }
+    .tries-div{
+        height: 50px;
+    }
+    p{
+        font-size: 22px;
+    }
+    button{
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 370px) {
+    .besked-div{
+        height: 45px;
+    }
+    .score-div{
+        height: 45px;
+    }
+    .tries-div{
+        height: 45px;
+    }
+    p{
+        font-size: 20px;
+    }
+    button{
+        font-size: 11px;
+    }
+}
+.morty{
+    width: 16%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    padding: 0 5px;
+}
+.rick{
+    width: 16%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    padding: 0 5px;
+}

@@ -1,0 +1,178 @@
+body {
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #202020;
+}
+
+.main-container {
+  position: relative;
+  z-index: 100;
+}
+
+#gameboard {
+  margin: 0 auto;
+  height: 100px;
+  text-align: center;
+  font-size: 65px;
+  background-color: rgba(32, 32, 32, 0);
+}
+
+#display_result {
+  color: #4ebeff;
+  text-shadow: 1px 1px 5px black;
+  margin: 0 auto;
+  height: 70px;
+  font-size: 52px;
+}
+
+button {
+  color: #4ebeff;
+  margin: 8px;
+  padding: 8px;
+  border: 1px solid #4ebeff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  text-shadow: 1px 1px 1px black;
+  background-color: #1d1d1d;
+}
+
+button:hover {
+  background-color: #161616;
+}
+
+button:focus {
+  outline: none;
+}
+
+.higher-btn:hover {
+  -webkit-box-shadow: 0px 1px 5px black;
+          box-shadow: 0px 1px 5px black;
+}
+
+.higher-btn:active {
+  -webkit-box-shadow: inset 0px 1px 5px #646464;
+          box-shadow: inset 0px 1px 5px #646464;
+}
+
+.lower-btn:hover {
+  -webkit-box-shadow: 0px 1px 5px black;
+          box-shadow: 0px 1px 5px black;
+}
+
+.lower-btn:active {
+  -webkit-box-shadow: inset 0px 1px 5px #646464;
+          box-shadow: inset 0px 1px 5px #646464;
+}
+
+.reset-btn:hover {
+  -webkit-box-shadow: 0px 1px 5px black;
+          box-shadow: 0px 1px 5px black;
+}
+
+.reset-btn:active {
+  -webkit-box-shadow: inset 0px 1px 5px #646464;
+          box-shadow: inset 0px 1px 5px #646464;
+}
+
+i {
+  padding: 10px;
+  text-shadow: 2px 2px 5px black;
+  color: #28b0ff;
+}
+
+p {
+  color: #4ebeff;
+  text-shadow: 1px 1px 5px black;
+  font-size: 45px;
+  margin: 5px;
+}
+
+.besked-div {
+  width: 100%;
+  height: 70px;
+}
+
+.tries-div {
+  width: 100%;
+  height: 100px;
+}
+
+.score-div {
+  width: 100%;
+  height: 100px;
+}
+
+@media only screen and (max-width: 875px) {
+  .besked-div {
+    height: 75px;
+  }
+  .score-div {
+    height: 75px;
+  }
+  .tries-div {
+    height: 75px;
+  }
+  p {
+    font-size: 35px;
+  }
+  button {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  .besked-div {
+    height: 50px;
+  }
+  .score-div {
+    height: 50px;
+  }
+  .tries-div {
+    height: 50px;
+  }
+  p {
+    font-size: 22px;
+  }
+  button {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .besked-div {
+    height: 45px;
+  }
+  .score-div {
+    height: 45px;
+  }
+  .tries-div {
+    height: 45px;
+  }
+  p {
+    font-size: 20px;
+  }
+  button {
+    font-size: 11px;
+  }
+}
+
+.morty {
+  width: 16%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  padding: 0 5px;
+}
+
+.rick {
+  width: 16%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  padding: 0 5px;
+}
+/*# sourceMappingURL=style.css.map */
