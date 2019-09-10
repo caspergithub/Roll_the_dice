@@ -14,6 +14,11 @@ let gameScore = 0;
 
 let gameTries = 0;
 
+// Get the modal
+var modal = document.getElementById("myModal");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
 /**
  * Funktion til at hente tilfældigt nummer
  * @param num_eyes
@@ -31,7 +36,7 @@ function initGame() {
     gameboard.innerHTML = "";
 
     //Bygger array med terninger - hver terning får et tilfældigt nummer
-    for(let i = 1; i <= num_dices; i++) {
+    for (let i = 1; i <= num_dices; i++) {
         array_dices.push(getRandomNumber());
     }
 }
@@ -42,9 +47,9 @@ function initGame() {
 function rollTheDice() {
     // Nulstiller spil
     initGame();
-    
+
     // Lopper array
-    for(let num of array_dices) {
+    for (let num of array_dices) {
         // Opretter <i> element til font awesome ikon
         let elm = document.createElement("i");
         // Tilføjer class attribute med font awesome klasser til element
@@ -54,26 +59,27 @@ function rollTheDice() {
     }
 
     var dice_result = 0;
-    for(i = 0; i < array_dices.length; i++){
+    for (i = 0; i < array_dices.length; i++) {
         dice_result += array_dices[i];
     }
-    display_result.innerHTML =+ dice_result;
+    display_result.innerHTML = + dice_result;
 
     var total = dice_result;
-    
+
     /**
      * VORES SPIL TEST START
      */
     let message;
-    if(total >= 7) {
+
+    var element = document.getElementById("rickAnim");
+
+    if (total >= 7) {
         message = "Ja!";
         document.getElementById("besked").innerHTML = message;
         gameScore = gameScore + 1;
         document.getElementById("score").innerHTML = gameScore;
         gameTries = gameTries + 1;
         document.getElementById("tries").innerHTML = gameTries;
-
-
     } else {
         message = "Nej!";
         document.getElementById("besked").innerHTML = message;
@@ -81,8 +87,13 @@ function rollTheDice() {
         document.getElementById("score").innerHTML = gameScore;
         gameTries = gameTries + 1;
         document.getElementById("tries").innerHTML = gameTries;
-
+        element.beginElement();
     }
+
+    if (gameScore == 10) {
+        modal.style.display = "block";
+    }
+
     /**
      * VORES SPIL TEST END
      */
@@ -94,9 +105,9 @@ function rollTheDice() {
 function rollTheDiceLower() {
     // Nulstiller spil
     initGame();
-    
+
     // Lopper array
-    for(let num of array_dices) {
+    for (let num of array_dices) {
         // Opretter <i> element til font awesome ikon
         let elm = document.createElement("i");
         // Tilføjer class attribute med font awesome klasser til element
@@ -106,27 +117,27 @@ function rollTheDiceLower() {
     }
 
     var dice_result = 0;
-    for(i = 0; i < array_dices.length; i++){
+    for (i = 0; i < array_dices.length; i++) {
         dice_result += array_dices[i];
     }
-    display_result.innerHTML =+ dice_result;
+    display_result.innerHTML = + dice_result;
 
     var total = dice_result;
-    
+
     /**
      * VORES SPIL TEST START
      */
     let message;
-    if(total <= 7) {
+
+    var element = document.getElementById("mortyAnim");
+
+    if (total <= 7) {
         message = "Sådan!";
         document.getElementById("besked").innerHTML = message;
         gameScore = gameScore + 1;
         document.getElementById("score").innerHTML = gameScore;
         gameTries = gameTries + 1;
         document.getElementById("tries").innerHTML = gameTries;
-
-
-
     } else {
         message = "Desværre!";
         document.getElementById("besked").innerHTML = message;
@@ -134,8 +145,13 @@ function rollTheDiceLower() {
         document.getElementById("score").innerHTML = gameScore;
         gameTries = gameTries + 1;
         document.getElementById("tries").innerHTML = gameTries;
-
+        element.beginElement();
     }
+
+    if (gameScore == 1) {
+        modal.style.display = "block";
+    }
+    
     /**
      * VORES SPIL TEST END
      */
@@ -143,5 +159,9 @@ function rollTheDiceLower() {
 
 
 
-// Kaster terningerne når siden loades
-/* rollTheDice(); */
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+    modal.style.display = "none";
+}
+
